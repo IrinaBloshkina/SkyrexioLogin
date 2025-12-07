@@ -1,6 +1,4 @@
 package user;
-
-import org.jspecify.annotations.Nullable;
 import utils.PropertyReader;
 
 public class UserFactory {

@@ -14,12 +14,10 @@ public class LoginTest extends BaseTest {
     @Owner("Irina Bloshkina @kakoy to vnutrenniy chat ")
     @TmsLink("SkyrexioLogin/tree/Branch-1")
     @Test
-    public void openProject() {
-        open("login");
-        LoginPage loginPage = new LoginPage();
-        loginPage.openPage();
+    public void openHomePage() {
+        LoginPage.open();
         User user = UserFactory.withRegularUserPermission();
-        loginPage.login(user);
-        $("svg[aria-haspopup='menu']").shouldBe(visible);
+        LoginPage.login(user);
+        $x("statistic").shouldBe(visible);
     }
 }
